@@ -1,0 +1,329 @@
+/* カスタムCSSをここに記述します */
+
+:root {
+    --primary-color: #e0e0e0; /* Light gray for text */
+    --secondary-color: #a0a0a0; /* Muted gray */
+    --background-dark: #1a1a1a; /* Dark background */
+    --background-light: #2a2a2a; /* Slightly lighter dark background */
+    --accent-color: #ff6b6b; /* Red accent */
+    --font-main: 'Montserrat', sans-serif;
+    --font-sub: 'Noto Sans JP', sans-serif;
+}
+
+body {
+    font-family: var(--font-sub);
+    color: var(--primary-color);
+    background-color: var(--background-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-main);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+    margin: 10px auto 0;
+}
+
+/* Header */
+.header {
+    background-color: rgba(26, 26, 26, 0.9); /* Semi-transparent dark */
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-family: var(--font-main);
+    font-size: 1.8em;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-left: 30px;
+}
+
+.nav-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: var(--font-main);
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: var(--accent-color);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: var(--primary-color);
+    margin-bottom: 4px;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Main+Visual') no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+}
+
+.hero-section .container {
+    z-index: 1;
+}
+
+.hero-section h2 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.hero-section p {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Sections */
+section {
+    padding: 100px 0;
+    background-color: var(--background-dark);
+}
+
+.about-section {
+    background-color: var(--background-light);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-content .profile-photo {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1.1em;
+}
+
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.music-item {
+    background-color: var(--background-light);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.music-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.music-item img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.music-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.music-item p {
+    font-size: 0.95em;
+    color: var(--secondary-color);
+}
+
+.contact-section {
+    background-color: var(--background-dark);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 15px;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--background-light);
+    color: var(--primary-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder {
+    color: var(--secondary-color);
+}
+
+.contact-form button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: var(--font-main);
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #cc5252;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.social-links a {
+    color: var(--primary-color);
+    font-size: 2em;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--background-light);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(26, 26, 26, 0.95);
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .hero-section h2 {
+        font-size: 3em;
+    }
+
+    .hero-section p {
+        font-size: 1.2em;
+    }
+
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content .profile-photo {
+        margin-bottom: 20px;
+    }
+
+    .music-grid {
+        grid-template-columns: 1fr;
+    }
+}
