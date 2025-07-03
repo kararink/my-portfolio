@@ -118,7 +118,7 @@ h2::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: url('https://via.placeholder.com/1920x1080/000000/FFFFFF?text=Main+Visual') no-repeat center center/cover;
+    background: url('../img/ryu.jpg') no-repeat center center/cover;
     position: relative;
     color: white;
 }
