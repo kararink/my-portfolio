@@ -144,6 +144,8 @@ h2::after {
     font-size: 4em;
     margin-bottom: 10px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    color: #800020; /* Wine red */
+    font-family: 'Kanteiryu', 'Noto Sans JP', sans-serif; /* Kanteiryu or similar */
 }
 
 .hero-section p {
