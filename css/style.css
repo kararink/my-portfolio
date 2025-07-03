@@ -118,7 +118,7 @@ h2::after {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url("img/ryu.jpg");
+    background-image: url("../img/ryu.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
