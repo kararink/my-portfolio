@@ -29,14 +29,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        // Contact form submission (dummy)
-        const contactForm = document.querySelector('.contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('メッセージが送信されました。後ほど担当者よりご連絡いたします。');
-                contactForm.reset(); // Clear the form
-            });
-        }
+        
     }
 });
