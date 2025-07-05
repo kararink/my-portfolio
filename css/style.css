@@ -188,34 +188,61 @@ section {
     gap: 40px;
 }
 
-.music-item {
-    background-color: var(--background-light);
-    padding: 20px;
+.music-item a {
+    display: block;
+    position: relative;
+    overflow: hidden;
     border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;
+    text-decoration: none;
 }
 
-.music-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+.music-item a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.music-item:hover a::before {
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .music-item img {
-    max-width: 100%;
-    border-radius: 4px;
-    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the area */
+    transition: transform 0.3s ease;
+}
+
+.music-item:hover img {
+    transform: scale(1.05);
+}
+
+.music-item h3, .music-item p {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    z-index: 1;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
 }
 
 .music-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    bottom: 50px;
+    font-size: 1.8em;
+    margin: 0;
 }
 
 .music-item p {
-    font-size: 0.95em;
-    color: var(--secondary-color);
+    bottom: 20px;
+    font-size: 1em;
+    color: #e0e0e0;
+    margin: 0;
 }
 
 .contact-section {
