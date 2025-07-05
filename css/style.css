@@ -189,12 +189,20 @@ section {
 }
 
 .music-item a {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Align content to the bottom */
+    height: 250px; /* Fixed height for the background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
-    overflow: hidden;
     border-radius: 8px;
+    overflow: hidden;
     color: white;
     text-decoration: none;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in height */
 }
 
 .music-item a::before {
@@ -204,45 +212,47 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: background-color 0.3s ease;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)); /* Dark gradient overlay */
+    transition: background 0.3s ease;
 }
 
 .music-item:hover a::before {
-    background-color: rgba(0, 0, 0, 0.7);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9));
 }
 
-.music-item img {
-    display: block;
-    width: 100%;
-    height: 250px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the area */
-    transition: transform 0.3s ease;
-}
-
-.music-item:hover img {
-    transform: scale(1.05);
-}
-
-.music-item h3, .music-item p {
-    position: absolute;
-    left: 20px;
-    right: 20px;
+.music-item a h3, .music-item a p {
+    position: relative; /* Ensure text is above overlay */
     z-index: 1;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-}
-
-.music-item h3 {
-    bottom: 50px;
-    font-size: 1.8em;
     margin: 0;
 }
 
-.music-item p {
-    bottom: 20px;
+.music-item a h3 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.music-item a p {
     font-size: 1em;
     color: #e0e0e0;
-    margin: 0;
+}
+
+/* Specific background images */
+.music-item-note {
+    background-image: url("../img/chawan001.jpg");
+}
+
+.music-item-genbu {
+    background-image: url("../img/chawan003.jpg");
+}
+
+.music-item-gachaztu {
+    background-image: url("../img/chawan002.jpg");
+}
+
+.music-item:hover a {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .contact-section {
