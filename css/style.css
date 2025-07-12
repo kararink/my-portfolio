@@ -250,12 +250,7 @@ section {
 }
 
 .music-item-genbu {
-    width: 300px;
-    height: 250px;
-    display: block !important; /* 強制表示 */
-    z-index: 9999 !important; /* 最前面表示 */
-    border: 5px solid limegreen !important; /* 目立つボーダー */
-    background-color: purple !important; /* 強制背景色 */
+    background-image: url("../img/chawan003.png");
 }
 
 .music-item-gachaztu {
