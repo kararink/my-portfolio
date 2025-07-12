@@ -188,51 +188,58 @@ section {
     gap: 40px;
 }
 
-.music-item a {
+.music-item {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Align content to the bottom */
-    height: 250px; /* Fixed height for the background image */
+    justify-content: flex-end;
+    height: 250px;
+    padding: 20px;
+    border-radius: 8px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    color: white;
     text-decoration: none;
-    padding: 20px;
-    box-sizing: border-box; /* Include padding in height */
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.music-item a::before {
+.music-item::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)); /* Dark gradient overlay */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
     transition: background 0.3s ease;
 }
 
-.music-item:hover a::before {
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9));
+.music-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-.music-item a h3, .music-item a p {
-    position: relative; /* Ensure text is above overlay */
+.music-item:hover::before {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
+}
+
+.music-item-content {
+    position: relative;
     z-index: 1;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-    margin: 0;
 }
 
-.music-item a h3 {
+.music-item h3, .music-item p {
+    margin: 0;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+.music-item h3 {
     font-size: 1.8em;
     margin-bottom: 5px;
 }
 
-.music-item a p {
+.music-item p {
     font-size: 1em;
     color: #e0e0e0;
 }
@@ -243,16 +250,16 @@ section {
 }
 
 .music-item-genbu {
-    background-image: url("../img/chawan003.png");
+    width: 300px;
+    height: 250px;
+    display: block !important; /* 強制表示 */
+    z-index: 9999 !important; /* 最前面表示 */
+    border: 5px solid limegreen !important; /* 目立つボーダー */
+    background-color: purple !important; /* 強制背景色 */
 }
 
 .music-item-gachaztu {
     background-image: url("../img/chawan002.jpg");
-}
-
-.music-item:hover a {
-    transform: scale(1.02); /* Slight zoom on hover */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .contact-section {
