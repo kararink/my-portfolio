@@ -1,11 +1,16 @@
 /* カスタムCSSをここに記述します */
 
 :root {
-    --primary-color: #e0e0e0; /* Light gray for text */
-    --secondary-color: #a0a0a0; /* Muted gray */
-    --background-dark: #1a1a1a; /* Dark background */
-    --background-light: #2a2a2a; /* Slightly lighter dark background */
-    --accent-color: #ff6b6b; /* Red accent */
+    --primary-color: #e0e0e0;
+    /* Light gray for text */
+    --secondary-color: #a0a0a0;
+    /* Muted gray */
+    --background-dark: #1a1a1a;
+    /* Dark background */
+    --background-light: #2a2a2a;
+    /* Slightly lighter dark background */
+    --accent-color: #ff6b6b;
+    /* Red accent */
     --font-main: 'Montserrat', sans-serif;
     --font-sub: 'Noto Sans JP', sans-serif;
 }
@@ -17,7 +22,8 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 .container {
@@ -26,7 +32,12 @@ body {
     padding: 0 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-main);
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -50,7 +61,8 @@ h2::after {
 
 /* Header */
 .header {
-    background-color: rgba(26, 26, 26, 0.9); /* Semi-transparent dark */
+    background-color: rgba(26, 26, 26, 0.9);
+    /* Semi-transparent dark */
     padding: 20px 0;
     position: fixed;
     width: 100%;
@@ -133,7 +145,8 @@ h2::after {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)); /* Dark gradient overlay */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    /* Dark gradient overlay */
 }
 
 .hero-section .container {
@@ -144,8 +157,10 @@ h2::after {
     font-size: 4em;
     margin-bottom: 10px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    color: #800020; /* Wine red */
-    font-family: 'Kanteiryu', 'Noto Sans JP', sans-serif; /* Kanteiryu or similar */
+    color: #800020;
+    /* Wine red */
+    font-family: 'Kanteiryu', 'Noto Sans JP', sans-serif;
+    /* Kanteiryu or similar */
 }
 
 .hero-section p {
@@ -211,17 +226,17 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.1));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1));
     transition: background 0.3s ease;
 }
 
 .music-item:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .music-item:hover::before {
-    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
 }
 
 .music-item-content {
@@ -229,9 +244,10 @@ section {
     z-index: 1;
 }
 
-.music-item h3, .music-item p {
+.music-item h3,
+.music-item p {
     margin: 0;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 .music-item h3 {
@@ -246,15 +262,15 @@ section {
 
 /* Specific background images */
 .music-item-note {
-    background-image: url("../img/chawan001.jpg");
+    background-image: url("../img/chawan001.jpg") !important;
 }
 
 .music-item-genbu {
-    background-image: url("../img/chawan003.png");
+    background-image: url("../img/chawan003.png") !important;
 }
 
 .music-item-gachaztu {
-    background-image: url("../img/chawan002.jpg");
+    background-image: url("../img/chawan002.jpg") !important;
 }
 
 .contact-section {
@@ -269,7 +285,8 @@ section {
     gap: 20px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     padding: 15px;
     border: 1px solid var(--secondary-color);
     background-color: var(--background-light);
@@ -278,7 +295,8 @@ section {
     font-size: 1em;
 }
 
-.contact-form input::placeholder, .contact-form textarea::placeholder {
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
     color: var(--secondary-color);
 }
 
@@ -354,7 +372,8 @@ section {
         width: 100%;
         background-color: rgba(26, 26, 26, 0.95);
         position: absolute;
-        top: 80px; /* Adjust based on header height */
+        top: 80px;
+        /* Adjust based on header height */
         left: 0;
         padding: 20px 0;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
