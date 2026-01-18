@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const formStatus = document.getElementById('form-status');
         const submitBtn = document.getElementById('submit-btn');
 
-        if (contactForm) {
+        if (contactForm && submitBtn) {
+            console.log('Contact form and submit button found.');
             contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 console.log('Form submission started');
 
-                // Change button state
                 submitBtn.disabled = true;
                 submitBtn.textContent = '送信中...';
 
@@ -54,16 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         body: formData
                     });
 
-                    console.log('Response status:', response.status);
-                    const result = await response.json();
-                    console.log('Response data:', result);
-
                     if (response.ok) {
                         formStatus.textContent = 'メッセージが送信されました。ありがとうございます！';
                         formStatus.className = 'form-status success';
                         contactForm.reset();
                     } else {
-                        throw new Error(result.message || '送信に失敗しました。');
+                        throw new Error('送信に失敗しました。');
                     }
                 } catch (error) {
                     console.error('Submission error:', error);
