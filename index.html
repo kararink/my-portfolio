@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Name - Portfolio</title>
     <link rel="stylesheet" href="css/style.css?v=1.3">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -41,7 +45,8 @@
                 <h2>ABOUT</h2>
                 <div class="about-content">
                     <img src="img/chawan000_profile.jpeg" alt="Your Photo" class="profile-photo">
-                    <p>音と言葉、そして日常の小さな奇跡を紡ぐクリエイター『ちゃわん』<br>AI音楽生成ツールSunoを駆使し、「玄武」「gachaztu」の名義で心に響く楽曲を創作。伝統的な作曲の枠を超え、テクノロジーと感性の融合によって生まれる新しい音楽の可能性を追究。一方で、愛犬との散歩、手作りチャーシューへのこだわり、季節の移ろいを丁寧に観察する日常から、創作のインスピレーションを得ている。「無為自然」という道を胸に、デジタルとアナログ、革新と伝統の境界を自在に行き来しながら、聴く人の心に寄り添う作品を生み出し続けている。</p>
+                    <p>音と言葉、そして日常の小さな奇跡を紡ぐクリエイター『ちゃわん』<br>AI音楽生成ツールSunoを駆使し、「玄武」「gachaztu」の名義で心に響く楽曲を創作。伝統的な作曲の枠を超え、テクノロジーと感性の融合によって生まれる新しい音楽の可能性を追究。一方で、愛犬との散歩、手作りチャーシューへのこだわり、季節の移ろいを丁寧に観察する日常から、創作のインスピレーションを得ている。「無為自然」という道を胸に、デジタルとアナログ、革新と伝統の境界を自在に行き来しながら、聴く人の心に寄り添う作品を生み出し続けている。
+                    </p>
                 </div>
             </div>
         </section>
@@ -50,24 +55,24 @@
             <div class="container">
                 <h2>note/music</h2>
                 <div class="music-grid">
-                    <a href="https://note.com/jf3esp" target="_blank" class="music-item music-item-note">
-                        <div class="music-item-content">
+                    <div class="music-item">
+                        <a href="https://note.com/jf3esp" target="_blank" class="music-item-note">
                             <h3>note トップページ</h3>
                             <p>私のnoteのトップページです。</p>
-                        </div>
-                    </a>
-                    <a href="https://suno.com/@pulmonauts" target="_blank" class="music-item music-item-genbu">
-                        <div class="music-item-content">
+                        </a>
+                    </div>
+                    <div class="music-item">
+                        <a href="https://suno.com/@pulmonauts" target="_blank" class="music-item-genbu">
                             <h3>Suno (玄武)</h3>
                             <p>AI音楽生成ツールSunoでの作品（玄武名義）</p>
-                        </div>
-                    </a>
-                    <a href="https://suno.com/@gachaztu" target="_blank" class="music-item music-item-gachaztu">
-                        <div class="music-item-content">
+                        </a>
+                    </div>
+                    <div class="music-item">
+                        <a href="https://suno.com/@gachaztu" target="_blank" class="music-item-gachaztu">
                             <h3>Suno (gachaztu)</h3>
                             <p>AI音楽生成ツールSunoでの作品（gachaztu名義）</p>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -76,18 +81,23 @@
             <div class="container">
                 <h2>CONTACT</h2>
                 <p>ご質問やご依頼などございましたら、以下のフォームまたはSNSよりお気軽にお問い合わせください。</p>
-                <form class="contact-form" action="https://formsubmit.co/pulmonauts4@gmail.com" method="POST">
+                <form class="contact-form" id="contact-form" action="https://formsubmit.co/ajax/pulmonauts4@gmail.com"
+                    method="POST">
                     <input type="text" name="name" placeholder="お名前" required>
                     <input type="email" name="email" placeholder="メールアドレス" required>
                     <textarea name="message" placeholder="メッセージ" rows="5" required></textarea>
-                    <input type="hidden" name="_next" value="https://kararink.github.io/my-portfolio/#contact">
                     <input type="hidden" name="_subject" value="ポートフォリオサイトからの新しいお問い合わせ">
-                    <button type="submit">送信</button>
+                    <input type="hidden" name="_captcha" value="false">
+                    <button type="submit" id="submit-btn">送信</button>
+                    <div id="form-status" class="form-status"></div>
                 </form>
                 <div class="social-links">
-                    <a href="https://x.com/gi__do?t=ztS6Y_6S4CCOSm4MqvH_iA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com/crito__n?utm_source=qr&igsh=MXhlcHJ6d2Zsd3JnYw==" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/17FZvmyH3K/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/gi__do?t=ztS6Y_6S4CCOSm4MqvH_iA&s=09" target="_blank"><i
+                            class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/crito__n?utm_source=qr&igsh=MXhlcHJ6d2Zsd3JnYw=="
+                        target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/17FZvmyH3K/" target="_blank"><i
+                            class="fab fa-facebook-f"></i></a>
                     <a href="https://note.com/jf3esp" target="_blank"><i class="fas fa-sticky-note"></i></a>
                     <a href="https://suno.com/@pulmonauts" target="_blank"><i class="fas fa-music"></i></a>
                     <a href="https://suno.com/@gachaztu" target="_blank"><i class="fas fa-music"></i></a>
@@ -105,4 +115,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

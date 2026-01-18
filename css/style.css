@@ -298,6 +298,29 @@ section {
     background-color: #cc5252;
 }
 
+.form-status {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    background-color: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.form-status.error {
+    display: block;
+    background-color: rgba(244, 67, 54, 0.2);
+    color: #f44336;
+    border: 1px solid #f44336;
+}
+
 .social-links {
     text-align: center;
     margin-top: 40px;
