@@ -262,15 +262,15 @@ section {
 
 /* Specific background images */
 .music-item-note {
-    background-image: url("../img/chawan001.jpg") !important;
+    background-image: url("/my-portfolio/img/chawan001.jpg") !important;
 }
 
 .music-item-genbu {
-    background-image: url("../img/chawan003.png") !important;
+    background-image: url("/my-portfolio/img/chawan003.png") !important;
 }
 
 .music-item-gachaztu {
-    background-image: url("../img/chawan002.jpg") !important;
+    background-image: url("/my-portfolio/img/chawan002.jpg") !important;
 }
 
 .contact-section {
